@@ -1,64 +1,39 @@
-import { Separator } from "@/components/ui/separator"
-import { Skeleton } from "@/components/ui/skeleton"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
-    <main className="flex min-h-screen flex-col p-8">
-      <div className="space-y-2">
-        <Skeleton className="h-8 w-[150px]" />
-        <Skeleton className="h-4 w-[250px]" />
-      </div>
-
-      <Separator className="my-6" />
-
-      <div className="max-w-4xl mx-auto">
-        <Card>
+    <div className="flex justify-center items-center min-h-[80vh]">
+      <div className="container max-w-4xl">
+        <Card className="w-full">
           <CardHeader>
             <CardTitle>
-              <Skeleton className="h-7 w-[200px]" />
+              <Skeleton className="h-9 w-[300px]" />
             </CardTitle>
             <CardDescription>
-              <div className="flex items-center gap-2">
-                <Skeleton className="h-4 w-[100px]" />
-                <Skeleton className="h-4 w-[80px]" />
-              </div>
+              <Skeleton className="h-6 w-[100px]" />
             </CardDescription>
           </CardHeader>
-          
-          <CardContent className="space-y-6">
+          <CardContent>
             <div className="space-y-2">
-              <Skeleton className="h-4 w-[80px]" />
-              <Skeleton className="h-6 w-[150px]" />
-            </div>
-
-            <div className="space-y-2">
-              <Skeleton className="h-4 w-[100px]" />
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-[90%]" />
-                <Skeleton className="h-4 w-[80%]" />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Skeleton className="h-4 w-[90px]" />
-              <div className="flex gap-2">
-                <Skeleton className="h-8 w-[100px]" />
-                <Skeleton className="h-8 w-[100px]" />
-              </div>
+              <Skeleton className="h-5 w-full" />
+              <Skeleton className="h-5 w-[90%]" />
+              <Skeleton className="h-5 w-[80%]" />
             </div>
           </CardContent>
-
-          <CardFooter className="flex justify-between">
-            <div className="flex items-center gap-4">
-              <Skeleton className="h-8 w-[120px]" />
-              <Skeleton className="h-8 w-[120px]" />
-            </div>
-            <Skeleton className="h-8 w-[100px]" />
+          <CardFooter className="flex justify-between items-center">
+            <Skeleton className="h-10 w-[100px]" />
+            <Skeleton className="h-10 w-[150px]" />
           </CardFooter>
         </Card>
       </div>
-    </main>
-  )
+    </div>
+  );
 }

@@ -1,29 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 export default function TicketsPage() {
-  const [name, setName] = useState("")
-  const [price, setPrice] = useState("")
-  const [content, setContent] = useState("")
-  const router = useRouter()
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [content, setContent] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send this data to your backend
-    console.log({ name, price, content })
+    console.log({ name, price, content });
     // Reset form and redirect to home
-    setName("")
-    setPrice("")
-    setContent("")
-    router.push("/")
-  }
+    setName("");
+    setPrice("");
+    setContent("");
+    router.push("/");
+  };
 
   return (
     <div>
@@ -32,7 +39,9 @@ export default function TicketsPage() {
         <form onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>New Ticket</CardTitle>
-            <CardDescription>Fill in the details for the new ticket</CardDescription>
+            <CardDescription>
+              Fill in the details for the new ticket
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
@@ -65,11 +74,12 @@ export default function TicketsPage() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full">Create Ticket</Button>
+            <Button type="submit" className="w-full">
+              Create Ticket
+            </Button>
           </CardFooter>
         </form>
       </Card>
     </div>
-  )
+  );
 }
-

@@ -1,14 +1,16 @@
-import { Separator } from "@/components/ui/separator"
-import { TicketCard } from "@/features/tickets/components/TicketCard"
-import TicketsNotFound from "@/features/tickets/components/TicketsNotFound"
-import { getTickets } from "@/features/tickets/queries/get-tickets"
+import { Separator } from "@/components/ui/separator";
+import { TicketCard } from "@/features/tickets/components/TicketCard";
+import TicketsNotFound from "@/features/tickets/components/TicketsNotFound";
+import { getTickets } from "@/features/tickets/queries/get-tickets";
 
 export default async function Home() {
-  const tickets = await getTickets()
+  const tickets = await getTickets();
 
   if (tickets.length === 0) {
-    return <TicketsNotFound />
+    return <TicketsNotFound />;
   }
+
+  console.log("home page");
 
   return (
     <main className="flex min-h-screen flex-col p-8">
@@ -29,5 +31,5 @@ export default async function Home() {
         ))}
       </div>
     </main>
-  )
+  );
 }

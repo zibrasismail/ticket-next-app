@@ -1,9 +1,10 @@
-import { Ticket } from "../types"
-import { tickets } from "../data/tickets"
+import { Ticket } from "../types";
+import { tickets } from "../data/tickets";
 
 export async function getTickets(): Promise<Ticket[]> {
   // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-  
-  return tickets
+  // throw new Error("Failed to fetch tickets");
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  return tickets;
 }

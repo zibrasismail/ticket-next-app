@@ -1,6 +1,6 @@
-import { Separator } from "@/components/ui/separator"
-import { TicketSkeleton } from "@/features/tickets/components/TicketSkeleton"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Separator } from "@/components/ui/separator";
+import { TicketSkeleton } from "@/features/tickets/components/TicketSkeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
@@ -20,5 +20,5 @@ export default function Loading() {
         ))}
       </div>
     </main>
-  )
+  );
 }
